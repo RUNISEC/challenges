@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+   # Web challenges, ports 10000 - 11000
+
+    web1:
+        build:
+            context: ./challenges/web/web1
+            dockerfile: Dockerfile
+        ports:
+            - "10000:80"
+
+
+    # Pwn challenges, ports 11000 - 12000
+
+    pwn1:
+        build:
+            context: ./challenges/pwn/pwn1
+            dockerfile: Dockerfile
+        ports:
+            - "11000:5000"
+        privileged: true
+
+
+    # Rev challenges, ports 12000 - 13000

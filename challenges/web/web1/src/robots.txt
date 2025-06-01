@@ -1,0 +1,6 @@
+User-agent: OpenAIBot
+Disallow: /
+
+User-agent: RUNISEC{Do3s_aNy0ne_ev3n_re4D_th1S?}
+Allow: *
+

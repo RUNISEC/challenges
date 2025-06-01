@@ -1,0 +1,6 @@
+# ignore all exploit files
+exploit.py
+
+# other
+.vscode/
+.idea/
