@@ -22,6 +22,14 @@ services:
             - "11000:5000"
         privileged: true
 
+    pwn2:
+        build:
+            context: ./challenges/pwn/pwn2
+            dockerfile: Dockerfile
+        ports:
+            - "11001:5000"
+        privileged: true
+
 
     # Rev challenges, ports 12000 - 13000
 
