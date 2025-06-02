@@ -1,5 +1,7 @@
 # ignore all exploit files
 exploit.py
+solve.py
+
 
 # other
 .vscode/
