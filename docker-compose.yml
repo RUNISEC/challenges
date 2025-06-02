@@ -19,7 +19,7 @@ services:
             context: ./challenges/pwn/pwn1
             dockerfile: Dockerfile
         ports:
-            - "11001:5000"
+            - "11000:5000"
         privileged: true
 
 
