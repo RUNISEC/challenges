@@ -1,4 +1,4 @@
-// gcc -o pwn pwn2.c -std=c99 -g -fno-stack-protector -Wl,-z,execstack
+// gcc -o pwn pwn2.c -std=c99 -g -fno-stack-protector -no-pie -Wl,-z,execstack
 // ASLR disabled
 
 #include <stdio.h>
