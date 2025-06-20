@@ -1,7 +1,13 @@
 # ignore all exploit files
 exploit.py
 solve.py
+main.py
+test.py
+run.py
+do.py
 
+# core dump files
+core*
 
 # other
 .vscode/
