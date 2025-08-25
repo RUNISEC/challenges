@@ -9,6 +9,15 @@ do.py
 # core dump files
 core*
 
+# libc / ld
+libc*.so.*
+ld*.so.*
+
+# environment files
+.env
+env/
+venv/
+
 # other
 .vscode/
 .idea/
