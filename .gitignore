@@ -1,8 +1,7 @@
 # ignore all exploit files
+# if you need to expand this list do so
 exploit.py
 solve.py
-main.py
-test.py
 run.py
 do.py
 
