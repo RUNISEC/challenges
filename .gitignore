@@ -16,6 +16,7 @@ ld*.so.*
 .env
 env/
 venv/
+.venv
 
 # other
 .vscode/
