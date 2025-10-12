@@ -11,15 +11,7 @@ services:
         ports:
             - "10000:80"
 
-    web2:
-        build:
-            context: ./challenges/web/web2
-            dockerfile: Dockerfile
-        ports:
-            - "10000:80"
-
-
-    # Pwn challenges, ports 11000 - 12000
+     # Pwn challenges, ports 11000 - 12000
 
     pwn1:
         build:
