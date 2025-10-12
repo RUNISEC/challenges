@@ -11,6 +11,13 @@ services:
         ports:
             - "10000:80"
 
+    web2:
+        build:
+            context: ./challenges/web/web2
+            dockerfile: Dockerfile
+        ports:
+            - "10000:80"
+
 
     # Pwn challenges, ports 11000 - 12000
 
@@ -47,4 +54,12 @@ services:
             dockerfile: Dockerfile
         ports:
             - "12000:5000"
+        privileged: true
+
+     rev4:
+        build:
+            context: ./challenges/rev/rev4
+            dockerfile: Dockerfile
+        ports:
+            - "12003:5000"
         privileged: true
