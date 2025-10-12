@@ -56,7 +56,7 @@ services:
             - "12000:5000"
         privileged: true
 
-     rev4:
+    rev4:
         build:
             context: ./challenges/rev/rev4
             dockerfile: Dockerfile
