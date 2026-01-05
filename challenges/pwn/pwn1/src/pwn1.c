@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     setvbuf(stdout, NULL, _IONBF, 0);
 
     char buffer[64];
-    printf("Whats your name?: ");
+    printf("Whats your name?: \n");
     gets(buffer);
     printf("Hello, %s\n", buffer);
 
