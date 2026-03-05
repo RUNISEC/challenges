@@ -1,5 +1,7 @@
-# ignore all exploit files
 # if you need to expand this list do so
+
+
+# exploit files
 exploit.py
 solve.py
 run.py
@@ -12,12 +14,18 @@ core*
 libc*.so.*
 ld*.so.*
 
+#gdb
+.gdb_history
+
 # environment files
 .env
 env/
 venv/
 .venv
 
-# other
+# ide
 .vscode/
 .idea/
+
+# ai
+.claude/

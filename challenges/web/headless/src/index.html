@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NullPointer API - Developer Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: #1a1a2e;
+            color: #c8c8d0;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #16213e;
+            padding: 1rem 5%;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #00d2ff;
+        }
+
+        .logo span {
+            color: #e94560;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #8888a0;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #00d2ff;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .main h1 {
+            font-size: 2rem;
+            color: #00d2ff;
+            margin-bottom: 0.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main > p {
+            color: #8888a0;
+            margin-bottom: 2.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .endpoint {
+            background-color: #16213e;
+            border: 1px solid #0f3460;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .endpoint-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .method {
+            background-color: #00d2ff;
+            color: #1a1a2e;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .method.post {
+            background-color: #e94560;
+        }
+
+        .endpoint-path {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .endpoint-body {
+            padding: 1.2rem 1.5rem;
+        }
+
+        .endpoint-body p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #8888a0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block {
+            background-color: #0f0f23;
+            border: 1px solid #0f3460;
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .code-block .comment {
+            color: #555577;
+        }
+
+        .code-block .keyword {
+            color: #e94560;
+        }
+
+        .code-block .string {
+            color: #98c379;
+        }
+
+        .code-block .url {
+            color: #00d2ff;
+        }
+
+        .hint {
+            background-color: #0f3460;
+            border-left: 3px solid #00d2ff;
+            padding: 1rem 1.5rem;
+            border-radius: 0 6px 6px 0;
+            margin-top: 2.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hint p {
+            color: #a0a0b8;
+            font-size: 0.9rem;
+        }
+
+        .hint strong {
+            color: #00d2ff;
+        }
+
+        footer {
+            background-color: #16213e;
+            color: #555577;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            margin-top: 4rem;
+            border-top: 1px solid #0f3460;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">Null<span>Pointer</span> API</div>
+            <div class="nav-links">
+                <a href="#">Docs</a>
+                <a href="#">Status</a>
+                <a href="#">Changelog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <h1>API Reference</h1>
+        <p>Explore our endpoints and start building.</p>
+
+        <div class="endpoint">
+            <div class="endpoint-header">
+                <span class="method">GET</span>
+                <span class="endpoint-path">/api/v1/status</span>
+            </div>
+            <div class="endpoint-body">
+                <p>Returns the current status of the API and server health information.</p>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <div class="endpoint-header">
+                <span class="method">GET</span>
+                <span class="endpoint-path">/api/v1/users</span>
+            </div>
+            <div class="endpoint-body">
+                <p>Retrieve a list of users. Requires authentication token.</p>
+            </div>
+        </div>
+
+        <div class="endpoint">
+            <div class="endpoint-header">
+                <span class="method post">POST</span>
+                <span class="endpoint-path">/api/v1/auth/login</span>
+            </div>
+            <div class="endpoint-body">
+                <p>Authenticate with the API and receive a bearer token.</p>
+            </div>
+        </div>
+
+        <div class="code-block">
+            <span class="comment"># Example: Check API status</span><br>
+            <span class="keyword">curl</span> <span class="url">http://localhost:3000/api/v1/status</span><br><br>
+            <span class="comment"># Tip: Always check the full response,</span><br>
+            <span class="comment"># not just the body. Headers can contain</span><br>
+            <span class="comment"># useful metadata about the API.</span>
+        </div>
+
+        <div class="hint">
+            <p><strong>Pro tip:</strong> Our API returns useful debugging information in the response headers. Make sure to inspect them when troubleshooting.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 NullPointer API. v2.4.1</p>
+    </footer>
+</body>
+</html>

@@ -4,34 +4,62 @@ services:
 
    # Web challenges, ports 10000 - 11000
 
-    web1:
+    robots:
         build:
-            context: ./challenges/web/web1
+            context: ./challenges/web/robots
             dockerfile: Dockerfile
         ports:
             - "10000:80"
 
+    inspector:
+        build:
+            context: ./challenges/web/inspector
+            dockerfile: Dockerfile
+        ports:
+            - "10001:80"
+
+    console:
+        build:
+            context: ./challenges/web/console
+            dockerfile: Dockerfile
+        ports:
+            - "10002:80"
+
+    crumbs:
+        build:
+            context: ./challenges/web/crumbs
+            dockerfile: Dockerfile
+        ports:
+            - "10003:80"
+
+    headless:
+        build:
+            context: ./challenges/web/headless
+            dockerfile: Dockerfile
+        ports:
+            - "10004:80"
+
      # Pwn challenges, ports 11000 - 12000
 
-    pwn1:
+    i-dont-gets-it:
         build:
-            context: ./challenges/pwn/pwn1
+            context: ./challenges/pwn/i-dont-gets-it
             dockerfile: Dockerfile
         ports:
             - "11000:5000"
         privileged: true
 
-    pwn2:
+    i-kinda-gets-it:
         build:
-            context: ./challenges/pwn/pwn2
+            context: ./challenges/pwn/i-kinda-gets-it
             dockerfile: Dockerfile
         ports:
             - "11001:5000"
         privileged: true
 
-    pwn3:
+    cloud-storage:
       build:
-          context: ./challenges/pwn/pwn3
+          context: ./challenges/pwn/cloud-storage
           dockerfile: Dockerfile
       ports:
           - "11002:5000"
@@ -40,17 +68,17 @@ services:
 
     # Rev challenges, ports 12000 - 13000
 
-    rev1:
+    hardcoded:
         build:
-            context: ./challenges/rev/rev1
+            context: ./challenges/rev/hardcoded
             dockerfile: Dockerfile
         ports:
             - "12000:5000"
         privileged: true
 
-    rev4:
+    hal9000:
         build:
-            context: ./challenges/rev/rev4
+            context: ./challenges/rev/hal9000
             dockerfile: Dockerfile
         ports:
             - "12003:5000"
